@@ -1,20 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClient} from '@angular/common/http' 
+import { HttpClientModule} from '@angular/common/http' 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { LoginComponent } from './login/login.component';
-import { AuthserviceService } from './login/authservice.service';
+import { SignupComponent } from './signup/signup.component';
+//import { AuthserviceService } from './authservice.service';
+import { AuthService } from './auth.service';
 import { SignupStatusComponent } from './signup-status/signup-status.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    SignupComponent,
+    SignupStatusComponent,
     LoginComponent,
-    SignupStatusComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,7 @@ import { SignupStatusComponent } from './signup-status/signup-status.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AuthserviceService],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,7 +10,7 @@ app.use(cors());
 const PORT = 3000;
 
 const api = require('./routes/route');
-app.use('/api',api);
+app.use('/curriculum-tracker',api);
 
 const db=require("./db/connection")
 
